@@ -15,5 +15,12 @@ session = DBSession()
 
 
 @app.route('/')
-def hello_world():
+def post():
     return render_template('index.html')
+
+
+def my_feed():
+	return render_template('index.html')
+
+def comment():
+	return render_template('index.html')

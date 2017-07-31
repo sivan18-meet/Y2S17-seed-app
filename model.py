@@ -1,12 +1,20 @@
-from sqlalchemy import Column, DateTime, Integer, String, Boolean
+from sqlalchemy import Column, DateTime, Integer, String, Boolean, ForeignKey
 from sqlalchemy.ext.declarative import declarative_base
-
+from sqlalchemy.orm import relationship
 Base = declarative_base()
 
-class YourModel(Base):
-    __tablename__  = 'yourmodel'
-    id             = Column(Integer, primary_key=True)
-    # ADD YOUR FIELD BELOW ID
+class Post(Base):
+    __tablename__ = 'post'
+    id            = Column(Integer, primary_key=True)
+    title         = Column(String)
+    category      = Column(String)
+    debate        = Column(String)
+    comments      = relationship("Comment")
 
-# IF YOU NEED TO CREATE OTHER TABLE 
-# FOLLOW THE SAME STRUCTURE AS YourModel
+
+class Comment(Base):
+	__tablename__ = 'comment'
+	id            = Column(Integer, primary_key=True)
+	date          = Column(String)
+	comment       = Column(String)
+	post          = Column(Integer,ForeignKey("post.id"))
