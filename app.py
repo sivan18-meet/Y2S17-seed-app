@@ -30,4 +30,4 @@ def comment():
 @app.route('/<string:button_name>')
 def category(button_name):
 	category_posts= session.query(Post).filter_by(category=button_name).all()
-	return render_template('category.html')
+	return render_template('category.html', button_name=button_name)
