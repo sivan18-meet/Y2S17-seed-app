@@ -27,6 +27,7 @@ def my_feed():
 def comment():
 	return render_template('comment.html')
 
-@app.route('/category')
-def category():
+@app.route('/<string:button_name>')
+def category(button_name):
+	category_posts= session.query(Post).filter_by(category=button_name).all()
 	return render_template('category.html')
