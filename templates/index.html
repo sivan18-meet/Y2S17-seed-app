@@ -1,15 +1,6 @@
 <!DOCTYPE html>
 <html>
-  <head>
-  <style type="text/css">
-   
-.button {width: 180px;
-  height: 50px;
-font-family: Arial, Helvetica, sans-serif;
-    font-size: 90%;
-    font-weigth: bold;}
-  </style>
-    
+  <head>    
       <title>Homepage</title>
 
       <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
@@ -20,17 +11,21 @@ font-family: Arial, Helvetica, sans-serif;
       <script src="{{ url_for('static', filename='js/script.js') }}"></script>
   </head>
   <body>
-  <a href="{{url_for('post')}}">Click here to add a new post!</a>
+  &nbsp<a href="{{url_for('post')}}">Click here to add a new post!</a>
    <center><h1>Pro-Debates</h1></center> 
    <center><h2>Posts</h2></center>
-   <a href="{{url_for('category', button_name='Technology')}}"><button name="Technology" type="button" class="button">Technology</button></a>
+  &nbsp&nbsp&nbsp&nbsp<a href="{{url_for('category', button_name='Technology')}}"><button name="Technology" type="button" style="font-style:Monospace; font-size: 20px; " class="btn">Technology</button></a>
    <br>
-   <a href="{{url_for('category', button_name='Politics')}}"><button name="Politics" type="button" class="button">Poitics</button></a>
    <br>
-   <a href="{{url_for('category', button_name='Food')}}"><button name="Food" type="button" class="button">
+   &nbsp&nbsp&nbsp&nbsp<a href="{{url_for('category', button_name='Politics')}}"><button name="Politics" type="button" style="font-style: Monospace;font-size: 20px;" class="btn">Poitics</button></a>
+   <br>
+   <br>
+   &nbsp&nbsp&nbsp&nbsp<a href="{{url_for('category', button_name='Food')}}"><button name="Food" type="button" style="font-style: Monospace;font-size: 20px;" class="btn">
    Food</button></a>
    <br>
-   <a href="{{url_for('category', button_name='Art')}}"><button name="Art" type="button" class="button">
+   <br>
+  
+   &nbsp&nbsp&nbsp&nbsp<a href="{{url_for('category', button_name='Art')}}"><button name="Art" type="button" style="font-style: Monospace;font-size: 20px;" class="btn">
    Art</button></a>
 
    {% for post in posts %}
