@@ -8,5 +8,17 @@
 <body>
 	<h1>{{ button_name }}</h1>
 	<a href="{{url_for('my_feed')}}">Go Back</a>
+
+	 <div class="col-sm-10">
+      <ul>
+       {% for post in posts %}
+        <li>title:{{post.title}}</li>
+        <li>category : {{post.category}}</li>
+        <li>Debate : {{post.debate}}</li>
+        <li>-------------------</li>
+        {% endfor %} 
+      </ul>
+       
+  </div>
 </body>
 </html>
