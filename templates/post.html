@@ -6,9 +6,11 @@
 <body>	
 
 <h1>Post a Debate</h1><br>Title:
-<input type="text" name="Title"><br>
-Category:
 <br>
+
+<form action="{{url_for('post')}}", method="post">
+<input type="text" name="title"><br>
+Category:
 <input type="radio" name="category" value="Technology">technology
 <br>
 <input type="radio" name="category" value="Politics">Politics
@@ -24,7 +26,8 @@ Category:
 <br>
 <textarea placeholder="Type Here"></textarea>
 <br>
-<button type="button" class="button">Post</button>
+<input type="submit" name="post">Post<br>
+</form>
 
 <a href="{{url_for('my_feed')}}"><button type="button" class="button">Cancel</button></a>
    
