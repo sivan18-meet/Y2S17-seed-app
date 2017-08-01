@@ -1,7 +1,17 @@
 <!DOCTYPE html>
 <html>
   <head>
+  <style type="text/css">
+   
+.button {width: 180px;
+  height: 50px;
+font-family: Arial, Helvetica, sans-serif;
+    font-size: 90%;
+    font-weigth: bold;}
+  </style>
+    
       <title>Homepage</title>
+
       <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
       <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/style.css') }}">
 
@@ -10,9 +20,21 @@
       <script src="{{ url_for('static', filename='js/script.js') }}"></script>
   </head>
   <body>
-    <a href="{{url_for('post')}}">Click here to add a new post!</a>
-    
+
+   <center><h1>Pro-Debates</h1></center> 
+   
+   <button type="button" class="button">Technology</button>
+   <center><h2>Posts</h2></center>
+   <br>
+   <button type="button" class="button">Poitics</button>
+   <br>
+   <button type="button" class="button">
+   Food</button>
+   <br>
+   <button type="button" class="button">
+   Art</button>
 
 
-    <h1>Pro-Debate s</h1>
+    <h1>Pro-Debate</h1>
+
 </html>
