@@ -18,3 +18,4 @@ class Comment(Base):
 	date          = Column(String)
 	comment       = Column(String)
 	post          = Column(Integer,ForeignKey("post.id"))
+    
