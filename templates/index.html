@@ -11,25 +11,39 @@
       <script src="{{ url_for('static', filename='js/script.js') }}"></script>
   </head>
   <body>
-  &nbsp<a href="{{url_for('post')}}">Click here to add a new post!</a>
-   <center><h1>Pro-Debates</h1></center> 
-   <center><h2>Posts</h2></center>
-  &nbsp&nbsp&nbsp&nbsp<a href="{{url_for('category', button_name='Technology')}}"><button name="Technology" type="button" style="font-style:Monospace; font-size: 20px; " class="btn">Technology</button></a>
-   <br>
-   <br>
-   &nbsp&nbsp&nbsp&nbsp<a href="{{url_for('category', button_name='Politics')}}"><button name="Politics" type="button" style="font-style: Monospace;font-size: 20px;" class="btn">Poitics</button></a>
-   <br>
-   <br>
-   &nbsp&nbsp&nbsp&nbsp<a href="{{url_for('category', button_name='Food')}}"><button name="Food" type="button" style="font-style: Monospace;font-size: 20px;" class="btn">
-   Food</button></a>
-   <br>
-   <br>
-  
-   &nbsp&nbsp&nbsp&nbsp<a href="{{url_for('category', button_name='Art')}}"><button name="Art" type="button" style="font-style: Monospace;font-size: 20px;" class="btn">
-   Art</button></a>
 
-   {% for post in posts %}
-    {{post.title}}
-   {% endfor %}
+      <a href="{{url_for('post')}}">Click here to add a new post!</a>
+      <center><h1>Pro-Debates</h1></center> 
+      <center><h2>Posts</h2></center>
+
+  <div class="row">
+    <div class="col-sm-2">
+
+      <a href="{{url_for('category', button_name='Technology')}}"><button name="Technology" type="button" style="font-style:Monospace; font-size: 20px; " class="btn">Technology</button></a>
+     <br>
+     <br>
+     <a href="{{url_for('category', button_name='Politics')}}"><button name="Politics" type="button" style="font-style: Monospace;font-size: 20px;" class="btn">Poitics</button></a>
+     <br>
+     <br>
+     <a href="{{url_for('category', button_name='Food')}}"><button name="Food" type="button" style="font-style: Monospace;font-size: 20px;" class="btn">
+     Food</button></a>
+     <br>
+     <br>
+    
+     <a href="{{url_for('category', button_name='Art')}}"><button name="Art" type="button" style="font-style: Monospace;font-size: 20px;" class="btn">
+     Art</button></a>
+    </div>
+
+  <div class="col-sm-10">
+      <ul>
+       {% for post in posts %}
+        <li>title:{{post.title}}</li>
+        <li>category{{post.category}}</li>
+        <li>-------------------</li>
+        {% endfor %} 
+      </ul>
+       
+  </div>
+</div>
    
 </html>
