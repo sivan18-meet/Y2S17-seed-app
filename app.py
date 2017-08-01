@@ -41,7 +41,7 @@ def post():
         new_category = request.form.get('category')
         print('This error output %s' % new_title,  file=sys.stderr)
 
-        post = Post(title=new_title, category="eee")
+        post = Post(title=new_title, category=new_category)
         session.add(post)
         session.commit()
         # ADD SQL SESSION
