@@ -26,3 +26,7 @@ def my_feed():
 @app.route('/comment')
 def comment():
 	return render_template('comment.html')
+
+@app.route('/category')
+def category():
+	return render_template('category.html')
