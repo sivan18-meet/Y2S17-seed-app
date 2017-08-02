@@ -77,3 +77,25 @@ def sign_up():
 @app.route('/sign_in')
 def sign_in():
     return render_template('sign_in.html')
+
+
+@app.route('/comment/<int:post_id>', methods=['GET', 'POST'])
+def add_comment(post_id):
+    if request.method == "GET":
+        return render_template('index.html')
+    else:
+        new_comment   = request.form.get('comment')
+        
+        # print('This error output %s' % new_title,  file=sys.stderr)
+
+        comment = Comment(comment=new_comment, post=post_id)
+        session.add(comment)
+        session.commit()
+        # ADD SQL SESSION
+        # comments = session.query(Comment).filter_by(post=post_id)
+        posts =  session.query(Post).all()
+        return redirect(url_for('my_feed'))
+# @app.route()
+# def delete():
+    # session.query()
+    # filter(new_title=)
