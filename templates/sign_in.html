@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
+    file: sing_in.html
 -->
 <html>
     <head>
@@ -11,19 +9,19 @@ and open the template in the editor.
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 
-<link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
-      <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/style.css') }}">
+        <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+        <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/style.css') }}">
 
     </head>
     
         <ul>
-             <li><a  href="{{url_for('my_feed')}}">Home</a></li>  
-             <li><a  href="{{url_for('sign_in')}}">Sign In</a></li>  
-             <li><a  href="{{url_for('sign_up')}}">Sign Up</a></li>                     
+            <li><a  href="{{url_for('my_feed')}}">Home</a></li>    
+            <li><a  href="{{url_for('sign_up')}}">Sign Up</a></li>                     
              
-</ul>
+        </ul>
+        
         <h1>Sign In</h1>
-        <form name="form" action="sign_inDB.jsp" method="POST" onsubmit="return check(this)">
+        <form name="form" action="{{url_for('sign_in')}}" method="POST" onsubmit="return check(this)">
             <table border="2">
                 <thead>
                     <tr>
@@ -38,8 +36,7 @@ and open the template in the editor.
                     </tr>
                 </tbody>
             </table>
-         <input type="submit" value="Submit" name="submit" />
-         <input type="reset" name="reset" value="reset" />  
+         <input type="submit" class="button" name="sign_up"> 
         </form>
     </body>
 </html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!--
+    file: sign_up.html
+-->
+<html>
+    <head>
+
+        <title>Sign Un</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+        <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+        <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/style.css') }}">
+
+    </head>
+    
+        <ul>
+            <li><a  href="{{url_for('my_feed')}}">Home</a></li>  
+            <li><a  href="{{url_for('sign_in')}}">Sign In</a></li>                      
+             
+        </ul>
+        
+        <h1>Sign Up</h1>
+        <form name="form" action="{{url_for('sign_up')}}" method="POST" onsubmit="return check(this)">
+            <table border="2">
+                <th>
+                    <tr>
+                        <th>username: </th>
+                        <th><input type="text" name="username" size="40" /></th>
+                    </tr>
+                </th>
+
+                <tbody>
+                    <tr>
+                        <td>password: </td>
+                        <td><input type="password" name="password" size="40" /></td>
+                    </tr>
+                </tbody>
+
+                <tbody>
+                    <tr>
+                        <td>age: </td>
+                        <td><input type="number" name="age" size="40" /></td>
+                    </tr>
+                </tbody>
+
+                <tbody>
+                    <tr>
+                        <td>gender: </td>
+                        <td><input type="radio" name="gender" value="Female" size="13">Female
+                        
+                        <input type="radio" name="gender" value="Male" size="13" />Male
+                        
+                        <input type="radio" name="gender" value="Other" size="13" />Other</td>
+                    </tr>
+                </tbody>
+
+            </table>
+         <input type="submit" class="button" name="sign_up">
+         
+        </form>
+    </body>
+</html>

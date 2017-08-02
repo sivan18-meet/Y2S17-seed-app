@@ -25,4 +25,5 @@ class User(Base):
     username      = Column(String)
     age           = Column(Integer)
     gender        = Column(Boolean)
+    password      = Column(String)
     

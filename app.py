@@ -56,9 +56,23 @@ def delete_account():
 def change_password():
     return render_template('change_password.html')
 
-@app.route('/sign_up')
+@app.route('/sign_up', methods=['GET','POST'])
 def sign_up():
-    return render_template('sign_up.html')
+    if request.method == "GET":
+        return render_template('sign_up.html')
+    else:
+        new_username   = request.form.get('username')
+        new_age        = request.form.get('age')
+        new_gender     = request.form.get('gender')
+        new_password   = request.form.get('password')
+
+        user= User(username=new_username, age=new_age, gender=new_gender, password= new_password)
+        session.add(user)
+        session.commit()
+        # ADD SQL SESSION
+        return redirect(url_for('my_feed'))
+        
+
 
 @app.route('/sign_in')
 def sign_in():

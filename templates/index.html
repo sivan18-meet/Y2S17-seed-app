@@ -11,7 +11,7 @@
       <script src="{{ url_for('static', filename='js/script.js') }}"></script>
   </head>
   <body>
-
+      <span><a href="{{url_for('sign_up')}}"> Sign Up     </a></span><span><a href="{{url_for('sign_in')}}"> Sign In </a></span>
       
       <center><h1>Pro-Debates</h1></center> 
       <center><h2>Posts</h2></center>
@@ -20,9 +20,6 @@
 <br>
   <div class="row">
     <div class="col-sm-2">
-
-      <a href="{{url_for('sign_up')}}"><button type="button" style="font-style:Monospace;
-      margin: 20px; font-size: 20px; " class="btn">TSign Up</button></a>
 
       <a href="{{url_for('category', button_name='Technology')}}"><button name="Technology" type="button" style="font-style:Monospace;margin: 20px; font-size: 20px; " class="btn">Technology</button></a>
 
@@ -45,9 +42,11 @@
 
     &nbsp&nbsp&nbsp&nbsp<a href="{{url_for('category', button_name='Other')}}"><button name="Other" type="button" style="font-style: Monospace;font-size: 20px;" class="btn">
      Other</button></a>
+
+      
     </div>
 
-  
+    
       
 
 
