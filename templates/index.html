@@ -21,21 +21,20 @@
   <div class="row">
     <div class="col-sm-2">
 
-      &nbsp&nbsp&nbsp&nbsp<a href="{{url_for('sign_up')}}"><button type="button" style="font-style:Monospace; font-size: 20px; " class="btn">Sign Up</button></a>
-<br>
-     <br>
-      &nbsp&nbsp&nbsp&nbsp<a href="{{url_for('category', button_name='Technology')}}"><button name="Technology" type="button" style="font-style:Monospace; font-size: 20px; " class="btn">Technology</button></a>
-     <br>
-     <br>
-    &nbsp&nbsp&nbsp&nbsp <a href="{{url_for('category', button_name='Politics')}}"><button name="Politics" type="button" style="font-style: Monospace;font-size: 20px;" class="btn">Poitics</button></a>
-     <br>
-     <br>
-     &nbsp&nbsp&nbsp&nbsp<a href="{{url_for('category', button_name='Food')}}"><button name="Food" type="button" style="font-style: Monospace;font-size: 20px;" class="btn">
+      <a href="{{url_for('sign_up')}}"><button type="button" style="font-style:Monospace;
+      margin: 20px; font-size: 20px; " class="btn">TSign Up</button></a>
+
+      <a href="{{url_for('category', button_name='Technology')}}"><button name="Technology" type="button" style="font-style:Monospace;margin: 20px; font-size: 20px; " class="btn">Technology</button></a>
+
+     <a href="{{url_for('category', button_name='Politics')}}"><button name="Politics" type="button" style="font-style: Monospace;font-size: 20px;margin: 20px;" class="btn">Poitics</button></a>
+
+     <a href="{{url_for('category', button_name='Food')}}"><button name="Food" type="button" style="font-style: Monospace;font-size: 20px;margin: 20px;" class="btn">
      Food</button></a>
-     <br>
-     <br>
+     
     
-    &nbsp&nbsp&nbsp&nbsp <a href="{{url_for('category', button_name='Art')}}"><button name="Art" type="button" style="font-style: Monospace;font-size: 20px;" class="btn">
+
+     <a href="{{url_for('category', button_name='Art')}}"><button name="Art" type="button" style="font-style: Monospace;font-size: 20px;margin: 20px;" class="btn">
+
      Art</button></a>
  <br>
      <br>
@@ -70,9 +69,9 @@
     <h2>Here i am</h2>
     <a class="close" href="#">&times;</a>
     <div class="content">
-      Thank to pop me out of that button, but now i'm done so you can close this window.
+ COMMENT
       <form>
-        <input type="text" name="comment">
+        <input type="text" name="comment"> <br>
         <input type="submit" name="submit">
 
         
@@ -82,8 +81,13 @@
 </div>
 
 
+<<<<<<< Updated upstream
         </li>
        <br>
+=======
+        </li> <br>
+       
+>>>>>>> Stashed changes
         {% endfor %} 
       </ul>
        
