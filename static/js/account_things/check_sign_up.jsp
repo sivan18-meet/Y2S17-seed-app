@@ -18,23 +18,23 @@
           String driver="com.mysql.jdbc.Driver";
 Class.forName(driver).newInstance();
             
-String url = "jdbc:mysql://localhost:3306/hytm";// ùí ä÷éùåø ìîñã ðúåðéí ùàúí ðúúí
-Connection con = DriverManager.getConnection(url, "root", "root");// àåáéé÷è ùàçøàé òì ääúçáøåú ìîñã ðúåðéí
+String url = "jdbc:mysql://localhost:3306/hytm";// Ã¹Ã­ Ã¤Ã·Ã©Ã¹Ã¥Ã¸ Ã¬Ã®Ã±Ã£ Ã°ÃºÃ¥Ã°Ã©Ã­ Ã¹Ã ÃºÃ­ Ã°ÃºÃºÃ­
+Connection con = DriverManager.getConnection(url, "root", "root");// Ã Ã¥Ã¡Ã©Ã©Ã·Ã¨ Ã¹Ã Ã§Ã¸Ã Ã© Ã²Ã¬ Ã¤Ã¤ÃºÃ§Ã¡Ã¸Ã¥Ãº Ã¬Ã®Ã±Ã£ Ã°ÃºÃ¥Ã°Ã©Ã­
 
 
-//ôøîèøéí ùì äèåôñ ùìëí ìôé îä ùàúí äâãøúí
+//Ã´Ã¸Ã®Ã¨Ã¸Ã©Ã­ Ã¹Ã¬ Ã¤Ã¨Ã¥Ã´Ã± Ã¹Ã¬Ã«Ã­ Ã¬Ã´Ã© Ã®Ã¤ Ã¹Ã ÃºÃ­ Ã¤Ã¢Ã£Ã¸ÃºÃ­
 String uname = request.getParameter("username");
 String pass = request.getParameter("password");
 String age = request.getParameter("age");
-//éöéøú àåáéé÷è ùàéìúà
+//Ã©Ã¶Ã©Ã¸Ãº Ã Ã¥Ã¡Ã©Ã©Ã·Ã¨ Ã¹Ã Ã©Ã¬ÃºÃ 
 Statement state=con.createStatement();
 
-//áðééú äîçøåæú áò÷áåú äîéãò ùäîùúîù äëðéñ
+//Ã¡Ã°Ã©Ã©Ãº Ã¤Ã®Ã§Ã¸Ã¥Ã¦Ãº Ã¡Ã²Ã·Ã¡Ã¥Ãº Ã¤Ã®Ã©Ã£Ã² Ã¹Ã¤Ã®Ã¹ÃºÃ®Ã¹ Ã¤Ã«Ã°Ã©Ã±
 String sqlStr = String.format("insert into hytm.hytm VALUES(NULL,'"+uname+"','"+pass+"','"+age+"');");
  
-//áéöåò äùàéìúà ìúåê îñã äðúåðéí
+//Ã¡Ã©Ã¶Ã¥Ã² Ã¤Ã¹Ã Ã©Ã¬ÃºÃ  Ã¬ÃºÃ¥Ãª Ã®Ã±Ã£ Ã¤Ã°ÃºÃ¥Ã°Ã©Ã­
  int res=state.executeUpdate(sqlStr);
-//äúðú÷åú îäîñã ðúåðéí
+//Ã¤ÃºÃ°ÃºÃ·Ã¥Ãº Ã®Ã¤Ã®Ã±Ã£ Ã°ÃºÃ¥Ã°Ã©Ã­
  con.close();
 
           %>

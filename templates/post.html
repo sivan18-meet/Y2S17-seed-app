@@ -2,6 +2,8 @@
 <html>
 <head>
 	<title>Post</title>
+	<link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+      <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>	
 
@@ -27,7 +29,7 @@ Category:
 <br>
 <textarea placeholder="Type Here" name="debate"></textarea>
 <br>
-<input type="submit" name="post">Post<br>
+<input type="submit" class="button" name="post"><br>
 </form>
 
 <a href="{{url_for('my_feed')}}"><button type="button" class="button">Cancel</button></a>
