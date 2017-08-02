@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>The offical website of mercedes factory</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <h1 style="color:white; text-align: center"><b>Welcome to the World of mercedes</b></h1>
+        <style>
+            body {
+                background-image: url("tp.jpg");
+                background-repeat: no-repeat;
+                background-position: center;
+                margin-right: 200px;
+                  background-attachment: fixed;
+                    
+}
+        ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+</style>
+    </head>
+    
+        <ul>
+             <li><a  href="{{url_for('my_feed')}}">Home</a></li>  
+             <li><a  href="{{url_for('sign_in')}}">Sign In</a></li>  
+             <li><a  href="{{url_for('sign_up')}}">Sign Up</a></li>                     
+             
+</ul>
+        <h1 style="color:white">login in:</h1>
+        <form style="color:white" name="form" action="loginDB.jsp" method="POST" onsubmit="return check(this)">
+            <table border="2">
+                <thead>
+                    <tr>
+                        <th>username: </th>
+                        <th><input type="text" name="username" id="username" value="" size="40" /></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>password: </td>
+                        <td><input type="password" name="password" id="password" value="" size="40" /></td>
+                    </tr>
+                </tbody>
+            </table>
+         <input type="submit" value="Submit" name="submit" />
+         <input type="reset" name="reset" value="reset" />  
+        </form>
+    </body>
+</html>

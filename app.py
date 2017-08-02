@@ -47,3 +47,19 @@ def post():
         session.commit()
         # ADD SQL SESSION
         return redirect(url_for('my_feed'))
+
+@app.route('/delete')
+def delete_account():
+    return render_template('delete_account.html')
+
+@app.route('/password')
+def change_password():
+    return render_template('chnge_password.jsp')
+
+@app.route('/sign_up')
+def sign_up():
+    return render_template('sign_up.jsp')
+
+@app.route('/sign_in')
+def sign_in():
+    return render_template('sign_in.html')

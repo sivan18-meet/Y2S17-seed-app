@@ -1,6 +1,5 @@
 <%-- 
-    Document   : sign
-    Created on : May 16, 2016, 6:14:45 PM
+    Document   : sign_up
     Author     : Layan
 --%>
 
@@ -9,6 +8,9 @@
 <html>
     <head>
         <title>Sign In</title>
+        <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+        <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/style.css') }}">
+
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         
       <script type="text/javascript">
@@ -47,61 +49,22 @@ return false;
 
 </script>
        </head>
-   
-       
-                               <style>
-body {
-    background-image: url("images/telekom.jpg");
-    background-repeat: no-repeat;
-       background-attachment: fixed;
-       background-position:center;
-       background-size: 1290px;
-}
-</style>
-       
-       
-        <style>
-              ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #53006f;
-}
 
-li {
-    float:left;
-}
-
-li a {
-    display: inline-block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-li a:hover {
-    background-color:#53006f;
-}
-        </style>
    
     <body>
         
         
         
      <ul>
-      <li><a href="index.html">Home</a></li>
-  <li><a href="squad.jsp">Squad</a></li>
-  <li><a href="bundesliga.jsp">Bundesliga</a></li>
-  <li><a href="allianz.jsp">Allianz Arena</a></li>
-   <li><a href="top.jsp">Top Scorers</a></li>
-    <li><a href="uefa.jsp">Uefa</a></li>
-      <li><a href="dfb.jsp">DFB-Pokal</a></li>
-   <li><a href="sign.jsp">Sign Up</a></li>
-    <li><a href="login.jsp">Log in</a></li>
-     <li><a href="password.jsp">Change Password</a></li>
-      <li><a href="delete.jsp">Delete Account</a></li>
+     <li><a href="{{url_for('my_feed')}}"><button type="button" style="font-style: Monospace;font-size: 20px;" class="btn">Homepage</button></a></li>
+
+   <li><a href="{{url_for('sign_up')}}"><button type="button" style="font-style: Monospace;font-size: 20px;" class="btn">Sign Up</button></a></li>
+
+    <li><a href="{{url_for('sign_in')}}"><button type="button" style="font-style: Monospace;font-size: 20px;" class="btn">Sign In</button></a></li>
+
+     <li><a href="{{url_for('password')}}"><button type="button" style="font-style: Monospace;font-size: 20px;" class="btn">Change Password</button></a></li>
+
+      <li><a href="{{utl_for('delete')}}"><button type="button" style="font-style: Monospace;font-size: 20px;" class="btn">Delete Account</button></a></li>
 
          
        
