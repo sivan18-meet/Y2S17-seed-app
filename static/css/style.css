@@ -2,10 +2,9 @@ h1 {
 	color: black;
 	font-style: italic;
 }
-
-body {
-	background-color: rgb(162,219,217);
-}
+ body {
+  background-image: url("bg1.jpg");
+ }
 
 .btn {
 	width: 150px;
@@ -79,13 +78,6 @@ body {
 }
 
 
-
-body {
-  font-family: Arial, sans-serif;
-  background: url(http://www.shukatsu-note.com/wp-content/uploads/2014/12/computer-564136_1280.jpg) no-repeat;
-  background-size: cover;
-  height: 100vh;
-}
 
 h1 {
   text-align: center;
