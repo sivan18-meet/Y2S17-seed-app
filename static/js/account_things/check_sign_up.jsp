@@ -18,23 +18,24 @@
           String driver="com.mysql.jdbc.Driver";
 Class.forName(driver).newInstance();
             
-String url = "jdbc:mysql://localhost:3306/hytm";// ùí ä÷éùåø ìîñã ðúåðéí ùàúí ðúúí
-Connection con = DriverManager.getConnection(url, "root", "root");// àåáéé÷è ùàçøàé òì ääúçáøåú ìîñã ðúåðéí
+String url = "jdbc:mysql://localhost:3306/hytm";
+Connection con = DriverManager.getConnection(url, "root", "root");
 
 
-//ôøîèøéí ùì äèåôñ ùìëí ìôé îä ùàúí äâãøúí
+
 String uname = request.getParameter("username");
 String pass = request.getParameter("password");
 String age = request.getParameter("age");
-//éöéøú àåáéé÷è ùàéìúà
+
 Statement state=con.createStatement();
 
-//áðééú äîçøåæú áò÷áåú äîéãò ùäîùúîù äëðéñ
+
 String sqlStr = String.format("insert into hytm.hytm VALUES(NULL,'"+uname+"','"+pass+"','"+age+"');");
  
-//áéöåò äùàéìúà ìúåê îñã äðúåðéí
+
  int res=state.executeUpdate(sqlStr);
-//äúðú÷åú îäîñã ðúåðéí
+
+
  con.close();
 
           %>

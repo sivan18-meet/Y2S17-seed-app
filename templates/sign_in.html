@@ -6,44 +6,14 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>The offical website of mercedes factory</title>
+
+        <title>Sign In</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <h1 style="color:white; text-align: center"><b>Welcome to the World of mercedes</b></h1>
-        <style>
-            body {
-                background-image: url("tp.jpg");
-                background-repeat: no-repeat;
-                background-position: center;
-                margin-right: 200px;
-                  background-attachment: fixed;
-                    
-}
-        ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-}
 
-li {
-    float: left;
-}
 
-li a {
-    display: inline-block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-li a:hover {
-    background-color: #111;
-}
-</style>
 <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
       <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/style.css') }}">
+
     </head>
     
         <ul>
@@ -52,8 +22,8 @@ li a:hover {
              <li><a  href="{{url_for('sign_up')}}">Sign Up</a></li>                     
              
 </ul>
-        <h1 style="color:white">login in:</h1>
-        <form style="color:white" name="form" action="loginDB.jsp" method="POST" onsubmit="return check(this)">
+        <h1>Sign In</h1>
+        <form name="form" action="sign_inDB.jsp" method="POST" onsubmit="return check(this)">
             <table border="2">
                 <thead>
                     <tr>

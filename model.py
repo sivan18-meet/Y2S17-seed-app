@@ -19,3 +19,10 @@ class Comment(Base):
 	comment       = Column(String)
 	post          = Column(Integer,ForeignKey("post.id"))
     
+class User(Base):
+    __tablename__ = 'user'
+    id            = Column(Integer, primary_key=True)
+    username      = Column(String)
+    age           = Column(Integer)
+    gender        = Column(Boolean)
+    

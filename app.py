@@ -4,7 +4,7 @@ import sys
 from flask import Flask, render_template, request, redirect, url_for
 
 # SQLAlchemy
-from model import Base, Post, Comment
+from model import Base, Post, Comment, User
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
@@ -54,11 +54,11 @@ def delete_account():
 
 @app.route('/password')
 def change_password():
-    return render_template('chnge_password.jsp')
+    return render_template('change_password.html')
 
 @app.route('/sign_up')
 def sign_up():
-    return render_template('sign_up.jsp')
+    return render_template('sign_up.html')
 
 @app.route('/sign_in')
 def sign_in():
