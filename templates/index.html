@@ -59,54 +59,21 @@
         <li>title:{{post.title}}</li>
         <li>category : {{post.category}}</li>
         <li>Debate : {{post.debate}}</li>
-        <li>
-        <br>
-        <br>
-  <a class="button" href="#popup1">Comment</a>
-  <a class="button" href="#popup1">hide post </a>
-
-
-<div id="popup1" class="overlay">
-  <div class="popup">
-    <h2>Here i am</h2>
-    <a class="close" href="#">&times;</a>
-    <div class="content">
- COMMENT
-      <form action="{{url_for('add_comment', post_id=post.id)}}" method="post">
-
-        <input type="text" name="comment"> <br>
-        <input type="submit" name="submit">
-        {% for comment in posts %}
-  <div class="box">
-  <ul>
-       
-        <li>comment:{{comment.comment}}
         </li>
         </ul>
-        </div>
-        {%endfor%}
-      </form>
-
+        <br>
+        <br>
+        <a  href="{{url_for('debate', post_id=post.id)}}"> <button>Comment</button></a>
+        <button>hide post </button>
 
         
-    </div>
+
+  
+
+        
   </div>
-</div>
-</div>
-
-
-        </li>
+ {%endfor%}
        <br>
-        </li> <br>
-       
-        {% endfor %} 
-      </ul>
-       
-  </div>
-
-
-
-
-
-   
+       <br>
+          
 </html>

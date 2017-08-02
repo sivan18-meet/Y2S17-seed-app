@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Debate</title>
+</head>
+<body>
+<div class="box">
+  
+ <form action="{{url_for('add_comment', post_id=post.id)}}" method="post">
+
+        <input type="text" name="comment"> <br>
+        <input type="submit" name="submit">
+
+      </form>
+
+        <ul>
+	  {% for comment in post.comments %}
+        <il>comment:{{comment.comment}}</il>
+        <br>
+   {%endfor%}
+        </ul>
+       
+</div>
+
+
+
+
+
+</body>
+</html>

@@ -99,3 +99,8 @@ def add_comment(post_id):
 # def delete():
     # session.query()
     # filter(new_title=)
+@app.route('/debate/<int:post_id>')
+def debate(post_id):
+    post = session.query(Post).filter_by(id=post_id).first()
+    return render_template('debate.html', post=post)
+
