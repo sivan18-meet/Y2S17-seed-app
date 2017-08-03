@@ -105,6 +105,19 @@ h1 {
   text-align: center;
 }
 
+.box1 {
+  
+  width: 40%;
+  margin: 0 auto;
+  background: rgba(255,255,255,0.2);
+  padding: 5px;
+  border: 2px solid rgb(255,42,0);
+  border-radius: 20px/50px;
+  background-clip: padding-box;
+  background-color: rgb(240,244,225);
+  text-align: center;
+}
+
 .button {
   font-size: 1em;
   padding: 10px;
@@ -186,3 +199,5 @@ h1 {
     width: 70%;
   }
 }
+
+ 

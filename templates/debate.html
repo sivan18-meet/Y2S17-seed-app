@@ -2,26 +2,51 @@
 <html>
 <head>
 	<title>Debate</title>
+
+  <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+      <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
+<br>
+<center>
 <div class="box">
+
+
+  <ul>  
+        <li>Title :{{post.title}}</li>
+        <li>Category : {{post.category}}</li>
+        <li>Debate : {{post.debate}}</li>
+        </li>
+        </ul>
   
- <form action="{{url_for('add_comment', post_id=post.id)}}" method="post">
+      
+        <form action="{{url_for('add_comment', post_id=post.id)}}" method="post">
 
-        <input type="text" name="comment"> <br>
-        <input type="submit" name="submit">
-
+        <input type="text" class="" name="comment"> <br>
+        <input type="submit" value="submit">
+        <a href="{{url_for('my_feed')}}"><button type="button" style="color: black">Cancel</button></a>
       </form>
+  </div>
+  <br>
+
+
+  
+ 
+
+      <br>
+
 
         <ul>
 	  {% for comment in post.comments %}
+    <div class="box1">
         <il>comment:{{comment.comment}}</il>
+        </div>
         <br>
    {%endfor%}
         </ul>
        
 </div>
-
+</center>
 
 
 
