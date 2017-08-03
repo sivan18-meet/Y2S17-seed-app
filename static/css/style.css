@@ -5,6 +5,10 @@ h1 {
  body {
   background-image: url("bg5.jpg");
  }
+.logo{
+  width: 226px;
+  height: 200px;
+}
 
 .btn {
 	width: 150px;

@@ -5,7 +5,7 @@ from flask import Flask, render_template, request, redirect, url_for
 
 # SQLAlchemy
 from model import Base, Post, Comment, User
-from sqlalchemy import create_engine
+from sqlalchemy import create_engine, desc
 from sqlalchemy.orm import sessionmaker
 
 # setup
@@ -18,7 +18,7 @@ session = DBSession()
 
 @app.route('/')
 def my_feed():
-	posts = session.query(Post).all()
+	posts = session.query(Post).order_by("id desc").all()
 	return render_template('index.html', posts=posts)
 
 
