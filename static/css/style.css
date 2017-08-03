@@ -9,7 +9,9 @@ h1 {
   width: 226px;
   height: 200px;
 }
-  
+ ul{
+  list-style-type: none;
+ } 
 
 .btn {
 	width: 150px;
