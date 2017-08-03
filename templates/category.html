@@ -11,16 +11,27 @@
 	<h1>{{ button_name }}</h1>
 	<a href="{{url_for('my_feed')}}"><button class="button">Go Back</button></a>
 
-	 <div class="col-sm-10">
-      <ul>
-       {% for post in posts %}
-        <li>title:{{post.title}}</li>
-        <li>category : {{post.category}}</li>
+
+
+
+
+  {% for post in posts %}
+  <br>
+  <div class="box">
+
+
+  <ul>  
+        <li>Title :{{post.title}}</li>
+        <li>Category : {{post.category}}</li>
         <li>Debate : {{post.debate}}</li>
-        <li>-------------------</li>
-        {% endfor %} 
-      </ul>
-       
+        </li>
+        </ul>
+        <br>
+        <br>
+        <a  href="{{url_for('debate', post_id=post.id)}}"> <button>Comment</button></a>
   </div>
+ {% endfor %} 
+
+
 </body>
 </html>
