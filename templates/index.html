@@ -16,7 +16,7 @@
       <center>
       <img src="{{url_for('static', filename= 'css/logo1.jpg')}}" class="logo">
       </center> 
-&nbsp&nbsp<a href="{{url_for('post')}}"><button class="button"><span>Add a POST! </span></button></a>
+      <a href="{{url_for('post')}}"><button class="button"><span>Add a POST! </span></button></a>
 <br>
 <br>
   <div class="row">
@@ -55,24 +55,18 @@
   {% for post in posts %}
   <br>
   <div class="box">
-
-
+  <a  href="{{url_for('debate', post_id=post.id)}}">
+  <div>
+    
   <ul>  
         <li>Title :{{post.title}}</li>
         <li>Category : {{post.category}}</li>
         <li>Debate : {{post.debate}}</li>
         </li>
         </ul>
-        
-        <a  href="{{url_for('debate', post_id=post.id)}}"> <button>Comment</button></a>
-
-  
-
-        
-
-  
-
-        
+  </div>
+  </a>
+            
   </div>
  {%endfor%}
        <br>
