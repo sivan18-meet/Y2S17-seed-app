@@ -18,17 +18,17 @@
         
       <ul>
         <li><a href="{{url_for('my_feed')}}">HomePage</a></li>
-        <li><a href="{{url_for('sign_up')}}">HomePage</a></li>
-        <li><a href="{{url_for('sign_in')}}">HomePage</a></li>
-        <li><a href="{{url_for('change_password')}}">HomePage</a></li>
-        <li><a href="{{url_for('delete_account')}}">HomePage</a></li>
+        <li><a href="{{url_for('sign_up')}}">Sign Up</a></li>
+        <li><a href="{{url_for('sign_in')}}">Sign In</a></li>
+        <li><a href="{{url_for('change_password')}}">Change Password</a></li>
+        <li><a href="{{url_for('delete_account')}}">Delete Account</a></li>
       </ul>
         
         
         
         
         
-   <form name="newForm" action="checksign.jsp" method="POST" onsubmit="return checkF(this)">
+   <form name="newForm" action="check_sign_up.jsp" method="POST" onsubmit="return checkF(this)">
      <font><p><h2>Delete account:</h2></p></font>
         <table>
             <tbody>

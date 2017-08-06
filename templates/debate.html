@@ -13,6 +13,7 @@
 
 
   <ul>  
+        <li>Username :{{post.username}}</li>
         <li>Title :{{post.title}}</li>
         <li>Category : {{post.category}}</li>
         <li>Debate : {{post.debate}}</li>
@@ -35,18 +36,7 @@
   
  
 
-      <br>
-
-
-        <ul>
-	  {% for comment in post.comments %}
-    <div class="box1">
-        comment:{{comment.comment}}
-        </div>
-        <br>
-   {%endfor%}
-        </ul>
-       
+   
 </div>
 </center>
 
