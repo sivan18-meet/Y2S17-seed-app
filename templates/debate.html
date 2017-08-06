@@ -12,13 +12,12 @@
 <div class="boxc">
 
 
-  <ul>  
-        <li>Nickname :{{post.nickname}}</li>
-        <li>Title :{{post.title}}</li>
-        <li>Category : {{post.category}}</li>
-        <li>Debate : {{post.debate}}</li>
-        </li>
-        </ul>
+   
+      Nickname :{{post.nickname}}
+  <br>Title :{{post.title}}
+  <br>Category : {{post.category}}
+  <br>Debate : {{post.debate}}
+        
   
       
         <form action="{{url_for('add_comment', post_id=post.id)}}" method="post">
@@ -38,6 +37,16 @@
 
    
 </div>
+<div class="comments_container" style="height: auto">
+     
+     {% for comment in post.comments %}
+     <div class="box2">
+      {{comment.comment}}
+        </div>
+        <br>
+         {%endfor%}
+        
+      </div>
 </center>
 
 
