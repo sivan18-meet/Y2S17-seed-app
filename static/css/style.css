@@ -101,8 +101,9 @@ h1 {
 }
 
 .box {
+  word-wrap: break-word;
   width: 30%;
-  height: auto;
+  height:auto;
   margin: 0 auto;
   background: rgba(255,255,255,0.2);
   padding: 35px;
