@@ -9,6 +9,7 @@ class Post(Base):
     title         = Column(String)
     category      = Column(String)
     debate        = Column(String)
+    nickname      = Column(String)
     comments      = relationship("Comment")
 
 
