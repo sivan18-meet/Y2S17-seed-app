@@ -1,5 +1,5 @@
 import sys
-
+import math
 # flask imports
 from flask import Flask, render_template, request, redirect, url_for
 
@@ -18,8 +18,25 @@ session = DBSession()
 
 @app.route('/')
 def my_feed():
-	posts = session.query(Post).order_by("id desc").all()
-	return render_template('index.html', posts=posts)
+    posts = session.query(Post).order_by("id desc").all()
+    i = 0
+    total_posts = len(posts)
+    
+    mid_way = math.ceil(total_posts/2)
+
+    #print(total_posts, file=sys.stderr)
+    posts_1 = []
+    posts_2 = []
+    while i < mid_way:
+        posts_1.append(posts[i])
+        i += 1
+    j = mid_way
+    while j < total_posts:
+        posts_2.append(posts[j])
+        j += 1
+
+
+    return render_template('index.html', posts=posts)
 
 
 @app.route('/comment')
