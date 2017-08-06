@@ -19,7 +19,7 @@
       <a href="{{url_for('post')}}"><button class="button"><span>Add a POST! </span></button></a>
 <br>
 <br>
-  <div class="row">
+ 
     <div class="col-sm-2">
 
 
@@ -47,7 +47,7 @@
 
       
     </div>
-
+ <div class="row">
     
       
 
@@ -62,14 +62,39 @@
         <li>Title :{{post.title}}</li>
         <li>Category : {{post.category}}</li>
         <li>Debate : {{post.debate}}</li>
-        </li>
-        </ul>
+
+ </ul>
+ <h3>Comments :</h3>
   </div>
   </a>
+     <!-- {% for comment in post.comments %}
+     <div style="height:50px;width:300px;overflow:auto;scrollbar-base-color:gold;padding:10px;" class="box1">
+        comment:{{comment.comment}}
+        
+      </div>
+      <br>
+      {%endfor%}
+      -->
+
+     <div class="comments_container">
+     
+     {% for comment in post.comments %}
+     <div class="box2">
+      {{comment.comment}}
+        </div>
+        <br>
+         {%endfor%}
+        
+      </div>
+      </div>
+      <br>
+      </div>
             
-  </div>
+             
+  
  {%endfor%}
        <br>
        <br>
-          
+
+</body>    
 </html>

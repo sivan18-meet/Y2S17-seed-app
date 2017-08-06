@@ -22,6 +22,8 @@
             Class.forName(driver).newInstance();
             Connection con = DriverManager.getConnection(url, user, pwd);
            
+            
+
             String uname = request.getParameter("username");
             String password = request.getParameter("password");
             String newpassword = request.getParameter("newpassword");

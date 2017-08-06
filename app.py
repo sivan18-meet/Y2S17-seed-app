@@ -74,15 +74,33 @@ def sign_up():
         
 
 
-@app.route('/sign_in')
+@app.route('/sign_in', methods=['GET', 'POST'])
 def sign_in():
-    return render_template('sign_in.html')
+    # Here we use a class of some kind to represent and validate our
+    # client-side form data. For example, WTForms is a library that will
+    # handle this for us, and we use a custom LoginForm to validate.
+    form = Sign_inForm()
+    if form.validate_on_submit():
+        # Login and validate the user.
+        # user should be an instance of your `User` class
+        sign_in_user(user)
+
+        flask.flash('Logged in successfully.')
+
+        next = flask.request.args.get('next')
+        # is_safe_url should check if the url is safe for redirects.
+        # See http://flask.pocoo.org/snippets/62/ for an example.
+        if not is_safe_url(next):
+            return flask.abort(400)
+
+        return flask.redirect(next or flask.url_for('my_feed'))
+    return flask.render_template('sign_in.html', form=form)
 
 
 @app.route('/comment/<int:post_id>', methods=['GET', 'POST'])
 def add_comment(post_id):
     if request.method == "GET":
-        return render_template('index.html')
+        return render_template('my_feed.html')
     else:
         new_comment   = request.form.get('comment')
         
