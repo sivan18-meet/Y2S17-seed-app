@@ -7,9 +7,12 @@
 </head>
 <body style="margin: 30px">	
 
+<div id="black">
+
+
+
 <h1>Post a Debate</h1><br>Title:
 <br>
-
 <form action="{{url_for('post')}}", method="post">
 <input type="text" name="title" placeholder="What do you want to discuss today?"> <br>
 Nickname:
@@ -31,11 +34,12 @@ Category:
 <br> Debate:
 <br>
 <textarea placeholder="Type Here" name="debate"></textarea>
+</div>
 <br>
-<input type="submit" class="button" name="post"><br>
+<input type="submit" class="button" style="color: black" name="post"><br>
 </form>
 
-<a href="{{url_for('my_feed')}}"><button type="button" class="button">Cancel</button></a>
+<a href="{{url_for('my_feed')}}"><button type="button" style="color: black" class="button">Cancel</button></a>
    
 </body>
 </html> 

@@ -14,9 +14,12 @@
     <!--<span><a href="{{url_for('sign_up')}}"> Sign Up     </a></span><span><a href="{{url_for('sign_in')}}"> Sign In </a></span> -->
       
       <center>
+      <div id="white">
       <img src="{{url_for('static', filename= 'css/logo1.jpg')}}" class="logo">
       </center> 
-      <a href="{{url_for('post')}}"><button class="button"><span>Add a POST! </span></button></a>
+      </div>>
+      <a href="{{url_for('post')}}"><button  style="color: black"  class="button"><span>Add a POST! </span></button></a>
+
 <br>
 <br>
  
@@ -63,7 +66,9 @@
         Title :{{post.title}}
     <br>Nickname :{{post.nickname}}
     <br>Category : {{post.category}}
-    <br>Debate : {{post.debate}}
+    <br>
+    <br>
+    <p id="debate_style"> {{post.debate}}</p>
 
 
 
@@ -78,7 +83,6 @@
      <div class="box2">
       {{comment.comment}}
         </div>
-        <br>
          {%endfor%}
         
       </div>
@@ -90,7 +94,7 @@
   
  {%endfor%}
        <br>
-       <br>
+       
 
 </body>    
 </html>
