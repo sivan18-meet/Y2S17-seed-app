@@ -58,7 +58,7 @@ def post():
         new_title    = request.form.get('title')
         new_category = request.form.get('category')
         new_debate   = request.form.get('debate')
-        print('This error output %s' % new_title,  file=sys.stderr)
+        # print('This error output %s' % new_title,  file=sys.stderr)
 
         post = Post(nickname=new_nickname, title=new_title, category=new_category, debate=new_debate)
         session.add(post)
